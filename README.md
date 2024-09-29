@@ -1,12 +1,8 @@
-# f3_user_auth
-Basic user Authentication in Fat free framework 
 # Fat Free Auth
 
 
 ### Prerequisites
-PHP 8.0 or more
-apache or nginx
-Mysql 8.0 or more
+
 Fat Free Framework 3.6 or more
 
 ### Installing
@@ -23,5 +19,6 @@ Fat Free Framework 3.6 or more
 - mail smtp settings
 
 Active logins
-kishorkumarkesavan:Kish@2511, kishorkumarkesavan1223:Kish@3462
+kishorkumarkesavan:Kish@2511
+kishorkumarkesavan1223:Kish@3462
 

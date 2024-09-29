@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<base href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}">
+	<title>User Auth</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg bg-dark ">
+	  <div class="container">
+		<a class="navbar-brand" href="#">User Auth</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		  <ul class="navbar-nav ml-auto">
+			  <check if="{{ isset(@SESSION.logged_in) && @SESSION.logged_in }}">
+			  <true> 
+				<li class="nav-item dropdown">				
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  {{ @SESSION.username }}</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="{{@SCHEME.'://'.@HOST.@BASE}}/user/update">{{ @i18n_settings }}</a>
+				  <a class="dropdown-item" href="{{@SCHEME.'://'.@HOST.@BASE}}/logout">{{ @i18n_logout }}</a>
+				</div>
+			  </li>
+			  </true>
+			  <false>
+				<li class="nav-item"> 
+					<a href="{{@SCHEME.'://'.@HOST.@BASE}}/login" class="nav-link">{{ @i18n_login }}</a>
+				</li>
+			  </false>
+			  </check>
+		  </ul>
+		  
+		</div>
+	  </div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container my-4 py-3">
