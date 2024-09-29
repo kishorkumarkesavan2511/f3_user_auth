@@ -23,6 +23,5 @@ Fat Free Framework 3.6 or more
 - mail smtp settings
 
 Active logins
-kishorkumarkesavan:Kish@2511
-kishorkumarkesavan1223:Kish@3462
+kishorkumarkesavan:Kish@2511, kishorkumarkesavan1223:Kish@3462
 
